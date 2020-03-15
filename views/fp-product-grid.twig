@@ -1,0 +1,17 @@
+{% for product in products %}
+
+	<article class="hide-child relative ba b--black-20 w-25 center">
+    <img src="{{ product.thumbnail.src }}" class="db" alt="{{ product.post_title }}" />
+    <div class="pa2 bt bg-white">
+      <h3 class="f1 fw6 mv0 pa3">{{ product.post_title }}</h3>
+      <p class="f3 gray mv3 ph3">{{ product.post_excerpt }}</p>
+      <a class="f3 fw6 link tc ph3 pv3 db bg-animate bg-dark-blue hover-bg-blue white br1" href="{{ product.slug }}">Get it</a>
+    </div>
+    <!-- a class="child absolute top-1 right-1 ba bw1 black-40 grow no-underline br-100 w1 h1 pa2 lh-solid b" href="#">×</a>
+	
+	//Weird floating for lightboxing
+
+	-->
+  </article>
+
+{% endfor %}
