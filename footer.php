@@ -27,12 +27,12 @@
 								_x( 'Y', 'copyright date format', 'twentytwenty' )
 							);
 							?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+							<a href="<?php echo esc_url("https://exmedia.co"); ?>"><?php echo "EX Media Inc"; //bloginfo( 'name' ); ?></a>
 						</p><!-- .footer-copyright -->
 
 						<p class="powered-by-wordpress">
-							<a href="https://bahama.ventures/">
-								Powered by <span style="font-weight: bold;">Bahama Ventures Inc.</span>
+							<a href="https://exlabs.us/">
+								Made with &#9825; by <span style="font-weight: bold;">EX.Labs</span>
 							</a>
 						</p><!-- .powered-by-wordpress -->
 
@@ -58,13 +58,13 @@
 			</footer><!-- #site-footer -->
 
 			<!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157908531-1"></script>
+			<!-- script async src="https://www.googletagmanager.com/gtag/js?id=UA-157908531-1"></script -->
 			<script>
-  				window.dataLayer = window.dataLayer || [];
-  				function gtag(){dataLayer.push(arguments);}
-  				gtag('js', new Date());
+  				//window.dataLayer = window.dataLayer || [];
+  				//function gtag(){dataLayer.push(arguments);}
+  				//gtag('js', new Date());
 
-  				gtag('config', 'UA-157908531-1');
+  				//gtag('config', 'UA-157908531-1');
 			</script>
 
 

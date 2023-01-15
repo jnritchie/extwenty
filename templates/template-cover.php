@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: X Cover Template
+ * Template Name: Cover Template
  * Template Post Type: post, page
  *
  * @package WordPress
@@ -36,38 +36,40 @@ get_header();
 
 	<div id="join" class="pv6">
 		<div class="cf mw9 center">
-			<h2 class="f0 tc">Join the Network</h2>
-			<div class="fl w-50 pa3">
+			<h2 class="f0 tc">Let's Connect</h2>
+			<!--div class="w-100 pa3">
 				<p class="f2">Get periodic updates via email on progress in this sector. Whether your a consumer, patient or potential producer.</p>
-			</div>
-			<div class="fl w-50 pa3">
-			 	<?php echo do_shortcode('[ninja_form id=3]'); ?>
+			</div -->
+			<div class="ph3 ph0-l">
+			 	<?php echo do_shortcode('[ninja_form id='.get_field('form_id').']'); ?>
 			</div>
 		</div>
 	</div>
 
 	<div id="shop" class="w-100 pv6 bg-light-pink">
-		<h2 class="f0 tc">Shop CanaBahama</h2>
-		<p class="tc">Show your support the the change to come and for local business.</p>
+		<div class="mw9 center">
+			<h2 class="f0 tc">Shop Photos</h2>
+			<p class="tc">Show your support the the change to come and for local business.</p>
 
-		<?php 
+			<?php 
 
-			$prod = array (
-				'post_type' => 'product',
-				//'post_status' => 'published',
-				'orderby' => 'published_date'				
-			);
+				$prod = array (
+					'post_type' => 'product',
+					//'post_status' => 'published',
+					//'orderby' => 'published_date',
+					'id' => 77				
+				);
 
-			$products = array();
-			$products['products'] = Timber::get_posts($prod);
-			Timber::render('fp-product-grid.twig', $products);	
+				$products = array();
+				$products['products'] = Timber::get_posts($prod);
+				Timber::render('fp-product-grid.twig', $products);	
 
-			//echo "<pre>";
-			//echo print_r($products);
-			//echo "</pre>";
+				//echo "<pre>";
+				//echo print_r($products);
+				//echo "</pre>";
 
-		?>
-
+			?>
+		</div>
 	</div><!-- /Shop -->
 
 </main><!-- #site-content -->
